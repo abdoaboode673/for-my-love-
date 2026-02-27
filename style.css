@@ -1,0 +1,456 @@
+/* ================== إعدادات عامة للصفحة ================== */
+body {
+    background: linear-gradient(135deg, #f65887, #be78ff);
+    /* خلفية متدرجة تعطي إحساس رومانسي */
+
+    font-family: Arial, sans-serif;
+    /* نوع الخط */
+
+    text-align: center;
+    /* توسيط النصوص افتراضياً */
+
+    padding-top: 80px;
+    /* مسافة من الأعلى */
+
+    color: #333;
+    /* لون النص الافتراضي */
+}
+
+/* ================== إطار العنوان الرئيسي ================== */
+.title-box {
+    display: inline-block;
+    /* يخلي الإطار بحجم المحتوى */
+
+    padding: 40px 40px;
+    /* مسافة داخلية حول النص */
+
+    border: 3px solid #ff2e63;
+    /* إطار وردي */
+
+    border-radius: 45px;
+    /* زوايا دائرية */
+
+    background-color: rgba(255, 255, 255, 0.65);
+    /* خلفية بيضا شفافة */
+
+    color: #9b5de5;
+    /* لون النص */
+
+    font-size: 92px;
+    /* حجم العنوان */
+
+    box-shadow: 0 50px 25px rgba(0, 0, 0, 0.15);
+    /* ظل قوي يعطي فخامة */
+
+    animation: slideDown 1.2s ease;
+    /* حركة نزول ناعمة */
+}
+
+/* حركة نزول العنوان */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== النص العادي ================== */
+.text {
+    font-size: 22px;
+    /* حجم النص */
+
+    margin-top: 10px;
+    /* مسافة من الأعلى */
+
+    color: #fcfcfc;
+    /* لون أبيض */
+}
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}/* حركة نزول العنوان */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== إطار الصورة ================== */
+.image-box {
+    margin-top: 10px;
+    /* مسافة فوق الصورة */
+}
+
+.image-box img {
+    width: 250px;
+    /* عرض الصورة */
+
+    border-radius: 20px;
+    /* زوايا ناعمة */
+
+    border: 4px solid #9b5de5;
+    /* إطار بنفسجي */
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    /* ظل للصورة */
+}
+
+/* ================== القلب الصغير ================== */
+.heart {
+    margin-top: 30px;
+    /* مسافة من الأعلى */
+
+    font-size: 90px;
+    /* حجم القلب */
+
+    cursor: pointer;
+    /* شكل المؤشر */
+
+    animation: beat 1s infinite;
+    /* نبض مستمر */
+}
+
+/* حركة نبض القلب */
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* ================== الرسالة السرية ================== */
+.secret {
+    display: none;
+    /* مخفية افتراضياً */
+
+    margin-top: 30px;
+    font-size: 32px;
+
+    color: #9b5de5;
+    /* لون بنفسجي */
+
+    background-color: rgba(255,255,255,0.7);
+    /* خلفية شفافة */
+
+    padding: 20px;
+    border-radius: 20px;
+}/* حركة نزول العنوان */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================== توسيط كامل للشاشة ================== */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ================== القلب الكبير ================== */
+.big-heart {
+    font-size: 580px;
+    /* قلب ضخم */
+
+    color: #ff2e63;
+    cursor: pointer;
+
+    animation: beat 1s infinite, fadeIn 1.5s ease;
+    /* نبض + ظهور */
+}
+
+/* حركة الظهور */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ================== الزينة بالخلفية ================== */
+.decor {
+    position: absolute;
+    /* حر الحركة */
+
+    border-radius: 50%;
+    /* شكل دائري */
+
+    opacity: 0.25;
+    /* شفافية */
+
+    z-index: -1;
+    /* خلف المحتوى */
+}
+
+/* زينة رقم 1 */
+.decor.one {
+    width: 200px;
+    height: 200px;
+    background: #ffb3c6;
+    top: 50px;
+    left: 30px;
+}
+
+/* زينة رقم 2 */
+.decor.two {
+    width: 300px;
+    height: 300px;
+    background: #cdb4db;
+    bottom: 80px;
+    right: 40px;
+}
+
+/* زينة رقم 3 */
+.decor.three {
+    width: 150px;
+    height: 150px;
+    background: #ff2e63;
+    bottom: 200px;
+    left: 60px;
+}
+
+/* ================== أقسام الصفحة الطويلة ================== */
+.section {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* عنوان القسم */
+.section-title {
+    font-size: 36px;
+    color: #9b5de5;
+    margin-bottom: 30px;
+}
+
+/* نص القسم */
+.section-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* ================== صور الأقسام ================== */
+.section-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    display: block;
+}
+
+/* ================== النص الرومانسي العريض ================== */
+.banner-text {
+    max-width: 800px;
+    margin: 60px auto;
+
+    font-size: 34px;
+    line-height: 2;
+
+    color: #7a2e7a;
+    text-align: center;
+
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+/* ===== Timeline عمودي ===== */
+.timeline-vertical {
+    padding: 80px 20px;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 32px;
+    color: #7a2e7a;
+    margin-bottom: 60px;
+}
+
+/* الحاوية العامة */
+.timeline-line {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* الخط الشاقولي بالنص */
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #d63384;
+    transform: translateX(-50%);
+}
+
+/* كل حدث */
+.timeline-event {
+    position: relative;
+    display: flex;
+    margin-bottom: 70px;
+    min-height: 40px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.timeline-event.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* الأحداث الفردية (يمين) */
+.timeline-event:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+/* الأحداث الزوجية (يسار) */
+.timeline-event:nth-child(even) {
+    justify-content: flex-end;
+}
+
+/* الدائرة */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    background: #d63384;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* الصندوق */
+.timeline-box {
+    background: rgba(255,255,255,0.75);
+    padding: 20px;
+    border-radius: 14px;
+    min-width: 260px;
+    max-width: 320px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* صندوق اليمين */
+.timeline-event:nth-child(odd) .timeline-box {
+    margin-left: 60px;
+    text-align: right;
+}
+
+/* صندوق اليسار */
+.timeline-event:nth-child(even) .timeline-box {
+    margin-right: 60px;
+    text-align: left;
+}
+
+/* التاريخ */
+.timeline-date {
+    font-size: 24px;
+    color: #a61c3c;
+    font-weight: bold;
+}
+
+/* العنوان */
+.timeline-box h3 {
+     font-size: 20px;
+    margin-top: 20px;
+    color: #7a2e7a;
+}
+
+/* ================== قسم الذكريات ================== */
+.memories-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* شبكة الذكريات */
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* كرت الذكرى */
+.memory {
+    background: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+/* hover */
+.memory:hover {
+    transform: translateY(-8px);
+}
+
+/* صورة الذكرى */
+.memory img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* نص الذكرى */
+.memory p {
+    padding: 5px;
+    font-size: 26px;
+    color: #7a2e7a;
+}
+/* ===== الرسالة الرومانسية ===== */
+
+.romantic-message {
+    max-width: 900px;          /* عرض مريح للنص */
+    margin: 100px auto;        /* توسيط + مسافة من فوق */
+    padding: 0 20px;
+    text-align: center;
+    direction: rtl;            /* مهم للعربي */
+}
+
+.romantic-message p {
+    font-size: 26px;           /* حجم الخط */
+    line-height: 2.2;          /* تباعد الأسطر (السر بالجمال) */
+    color: #7a2e7a;            /* بنفسجي ناعم */
+    margin-bottom: 40px;       /* مسافة بين كل سطر */
+    font-weight: 500;
+}
+
+/* السطر الأخير يكون أميز */
+.romantic-message .last-line {
+    font-size: 28px;
+    font-weight: 600;
+    color: #a61c3c;            /* لون أغمق */
+}
