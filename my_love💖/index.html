@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إلى حبيبتي ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="decor one"></div>
+<div class="decor two"></div>
+<div class="decor three"></div>
+
+    <h1 class="title-box">إلى أجمل إنسانة بحياتي</h1>
+
+    <p class="text">
+        هذا الموقع صممته مخصوص إلك 🤍  
+        لأنك أجمل شي صار بحياتي
+    </p>
+
+    <!-- الصورة -->
+    <div class="image-box">
+        <img src="love.jpg" alt="صورتنا">
+    </div>
+
+    <!-- القلب (زر خفي) -->
+   <div class="heart" onclick="toggleMessage()">❤️</div>
+
+
+    <!-- الرسالة السرية -->
+    <div id="secretMessage" class="secret">
+    عبارة  من اخيارك  💖  
+    </div>
+
+    
+
+
+<script>
+    let clickCount = 0;
+
+    function toggleMessage() {
+        clickCount++;
+
+        if (clickCount === 1) {
+            document.getElementById("secretMessage").style.display = "block";
+            document.getElementById("music").play();
+        } 
+        else if (clickCount === 2) {
+            window.location.href = "page2.html";
+        }
+    }
+</script>
+
+
+
+
+</body>
+</html>
